@@ -1,0 +1,1 @@
+create table training_classes(id bigint auto_increment, class_name varchar(255), start_date date, end_date date, primary key(id));

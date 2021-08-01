@@ -1,0 +1,39 @@
+###
+GET http://localhost:8080/api/mentor-tools
+Accept: application/json
+
+###
+GET http://localhost:8080/api/mentor-tools/1
+Accept: application/json
+
+###
+POST http://localhost:8080/api/mentor-tools
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Java Backed Advanced",
+  "startDate": "2021-01-15",
+  "endDate": "2021-08-15"
+}
+
+### Validation
+POST http://localhost:8080/api/mentor-tools
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": ""
+}
+
+###
+PUT http://localhost:8080/api/mentor-tools/4
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Java Backed Junior"
+}
+
+###
+DELETE http://localhost:8080/api/mentor-tools/4
