@@ -1,5 +1,7 @@
 package mentortools;
 
+import mentortools.trainingclass.CreateTrainingClassCommand;
+import mentortools.trainingclass.TrainingClassDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

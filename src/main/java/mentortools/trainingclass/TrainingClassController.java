@@ -1,4 +1,4 @@
-package mentortools;
+package mentortools.trainingclass;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

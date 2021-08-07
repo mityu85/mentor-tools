@@ -1,4 +1,4 @@
-package mentortools;
+package mentortools.trainingclass;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
