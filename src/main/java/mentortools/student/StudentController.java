@@ -18,7 +18,7 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<StudentDto> listStudents(Optional<String> name) {
+    public List<StudentDto> listStudents(@RequestParam Optional<String> name) {
         return studentService.listStudents(name);
     }
 

@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Service
 @AllArgsConstructor
+@Service
 public class StudentService {
 
     private ModelMapper modelMapper;

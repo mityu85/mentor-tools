@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Service
 @AllArgsConstructor
+@Service
 public class TrainingClassService {
 
     private ModelMapper modelMapper;
@@ -22,7 +22,7 @@ public class TrainingClassService {
                 .collect(Collectors.toList());
     }
 
-    public TrainingClassDto findTrainingClassById(long id) {
+    public TrainingClassDto findTrainingClassById(Long id) {
         return modelMapper.map(repository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("id cannot found " + id)), TrainingClassDto.class);
     }
@@ -36,7 +36,7 @@ public class TrainingClassService {
     }
 
     @Transactional
-    public TrainingClassDto updateTrainingClass(long id, UpdateTrainingClassCommand command) {
+    public TrainingClassDto updateTrainingClass(Long id, UpdateTrainingClassCommand command) {
         TrainingClass trainingClass = repository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("id cannot found " + id));
         trainingClass.setName(command.getName());

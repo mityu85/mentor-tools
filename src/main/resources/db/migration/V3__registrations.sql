@@ -1,0 +1,1 @@
+create table registrations(id bigint auto_increment, trainingclass_id bigint, student_id bigint, registration_status varchar(50), primary key (id));

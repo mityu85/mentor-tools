@@ -27,16 +27,16 @@ public class TrainingClassControllerRestTemplateIT {
     public void testListTrainingClasses() {
 
         TrainingClassDto trainingClassDto =
-                template.postForObject("/api/mentor-tools",
+                template.postForObject("/api/trainingclasses",
                         new CreateTrainingClassCommand("Backed Java Junior", LocalDate.now(), LocalDate.of(2021, 8, 29)),
                                 TrainingClassDto.class);
         assertEquals("Backed Java Junior", trainingClassDto.getName());
 
-        template.postForObject("/api/mentor-tools",
+        template.postForObject("/api/trainingclasses",
                 new CreateTrainingClassCommand("Backed Java Advanced", LocalDate.now(), LocalDate.of(2021, 8, 29)),
                 TrainingClassDto.class);
 
-        List<TrainingClassDto> trainingClasses = template.exchange("/api/mentor-tools",
+        List<TrainingClassDto> trainingClasses = template.exchange("/api/trainingclasses",
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<TrainingClassDto>>() {})

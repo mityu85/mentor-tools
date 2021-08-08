@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/mentor-tools")
+@RequestMapping("/api/trainingclasses")
 public class TrainingClassController {
 
     private TrainingClassService trainingClassService;
@@ -18,7 +18,7 @@ public class TrainingClassController {
     }
 
     @GetMapping
-    public List<TrainingClassDto> listTrainingClasses(Optional<String> prefix) {
+    public List<TrainingClassDto> listTrainingClasses(@RequestParam Optional<String> prefix) {
         return trainingClassService.listTrainingClasses(prefix);
     }
 

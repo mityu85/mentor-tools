@@ -1,0 +1,14 @@
+###
+GET http://localhost:8080/api/trainingclasses/1/registrations
+Accept: application/json
+
+###
+POST http://localhost:8080/api/trainingclasses/1/registrations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1
+}
+
+
